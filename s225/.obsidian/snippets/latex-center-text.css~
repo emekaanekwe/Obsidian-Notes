@@ -1,0 +1,4 @@
+.markdown-preview-view {
+    white-space: normal;
+    overflow-wrap: break-word;
+}

@@ -1,0 +1,22 @@
+{
+  "obsidian-prism-theme@@text-bold-custom-color-dt": "#466B9D",
+  "obsidian-prism-theme@@text-italic-bold-color-dt": "var(--color-red-text)",
+  "obsidian-prism-theme@@link-internal-color-dt": "var(--interactive-accent-text-hsl)",
+  "obsidian-prism-theme@@text-italic-color-dt": "var(--color-yellow-text)",
+  "obsidian-prism-theme@@text-bold-color-dt": "var(--color-purple-text)",
+  "obsidian-prism-theme@@h1-text-color-dt": "var(--h1-text-color-custom-dt)",
+  "obsidian-prism-theme@@h2-text-color-dt": "var(--color-cyan-text)",
+  "obsidian-prism-theme@@h3-text-color-dt": "var(--color-mint-text)",
+  "obsidian-prism-theme@@h4-text-color-dt": "var(--h4-text-color-custom-dt)",
+  "obsidian-prism-theme@@h5-text-color-dt": "var(--h5-text-color-custom-dt)",
+  "obsidian-prism-theme@@link-external-color-dt": "var(--color-pink-text-hsl)",
+  "obsidian-prism-theme@@h1-size": 2.6,
+  "obsidian-prism-theme@@h4-text-color-custom-dt": "#E29F36",
+  "obsidian-prism-theme@@h5-text-color-custom-dt": "#9856EB",
+  "obsidian-prism-theme@@h2-text-color-custom-dt": "#776FDC",
+  "obsidian-prism-theme@@h6-text-color-dt": "var(--color-grey-text)",
+  "obsidian-prism-theme@@h1-text-color-custom-dt": "#DE5A5A",
+  "obsidian-prism-theme@@h4-size": 1.35,
+  "obsidian-prism-theme@@h5-size": 1.05,
+  "obsidian-prism-theme@@h6-size": 0.85
+}
