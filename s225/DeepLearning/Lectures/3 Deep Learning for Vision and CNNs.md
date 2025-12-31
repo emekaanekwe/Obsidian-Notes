@@ -66,7 +66,7 @@ The modern evolution of the neocognitron, designed to be trained end-to-end.
     *   **Pooling Operation:** Achieves **size invariance** and provides a form of translational invariance by progressively reducing the spatial size of the feature maps.
 
 ---
-
+![[Pasted image 20250918125335.png]]
 ## 4. Core CNN Operations: Convolution
 
 ### Concept

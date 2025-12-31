@@ -120,11 +120,11 @@ A critical vulnerability of deep learning models.
 
 ### Summary of Key Concepts:
 
-| Concept | Description | Key Takeaway |
-| :--- | :--- | :--- |
-| **End-to-End Learning** | Jointly optimizing feature extraction and classification layers. | Superior to disconnected traditional ML pipelines; enabled by backpropagation. |
-| **ResNet / Skip Connections** | `Output = F(x) + x` | Solves vanishing gradients, enabling training of networks that are hundreds of layers deep. |
-| **1x1 Convolutions** | Filters that operate on the channel dimension only. | Used for cheap dimensionality reduction and feature pooling (e.g., in Inception modules). |
-| **Grad-CAM** | Gradient-weighted Class Activation Mapping. | Technique to create a heatmap showing which parts of an image were most important for a prediction. |
-| **Adversarial Example** | `x_adv = x + η` | A minimally perturbed input that causes a model to make a confident error. Highlights model brittleness. |
-| **Adversarial Training** | Training on a mix of clean and adversarial examples. | A primary defense method to improve model robustness against attacks. |
+| Concept                       | Description                                                      | Key Takeaway                                                                                             |
+| :---------------------------- | :--------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
+| **End-to-End Learning**       | Jointly optimizing feature extraction and classification layers. | Superior to disconnected traditional ML pipelines; enabled by backpropagation.                           |
+| **ResNet / Skip Connections** | `Output = F(x) + x`                                              | Solves vanishing gradients, enabling training of networks that are hundreds of layers deep.              |
+| **1x1 Convolutions**          | Filters that operate on the channel dimension only.              | Used for cheap dimensionality reduction and feature pooling (e.g., in Inception modules).                |
+| **Grad-CAM**                  | Gradient-weighted Class Activation Mapping.                      | Technique to create a heatmap showing which parts of an image were most important for a prediction.      |
+| **Adversarial Example**       | `x_adv = x + η`                                                  | A minimally perturbed input that causes a model to make a confident error. Highlights model brittleness. |
+| **Adversarial Training**      | Training on a mix of clean and adversarial examples.             | A primary defense method to improve model robustness against attacks.                                    |

@@ -8,59 +8,45 @@
         "type": "tabs",
         "children": [
           {
-            "id": "aaf3ba3f4a62ab18",
+            "id": "08fd2a0d09063ad9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PlanningAutomatedReasoning/Labs/lab8.md",
+                "file": "Assess/mathjax.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lab8"
+              "title": "mathjax"
             }
           },
           {
-            "id": "8059649ba9a04d7f",
+            "id": "9f6ae5d2de43bedd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DeepLearning/a1.md",
+                "file": "MachineLearning/exam/summary-lr.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "a1"
+              "title": "summary-lr"
             }
           },
           {
-            "id": "59182fa4401336df",
+            "id": "7e5e25a79a76938c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MachineLearning/Lectures/8 Latent Variable Models.md",
+                "file": "Assess/titles-mathjax.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8 Latent Variable Models"
-            }
-          },
-          {
-            "id": "e35ce52713bd934f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MachineLearning/wk6.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "wk6"
+              "title": "titles-mathjax"
             }
           }
         ],
@@ -226,53 +212,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59182fa4401336df",
+  "active": "7e5e25a79a76938c",
   "lastOpenFiles": [
-    "MachineLearning/Lectures/7 K-Means, Gaussian Mixture Models and Expectation -Maximization.md",
-    "MachineLearning/Lectures/8 Latent Variable Models.md",
-    "MachineLearning/Lectures/extra (wk8).md",
-    "Assess.md",
-    "DeepLearning/lab8.md",
-    "DeepLearning/wk5.md",
-    "DeepLearning/wk2.md",
-    "PlanningAutomatedReasoning/Labs/lab8.md",
-    "PlanningAutomatedReasoning/Lectures/wk8.md",
-    "DeepLearning/Assignments/a1.md",
-    "DeepLearning/Quizzes/q1.md",
-    "DeepLearning/Quizzes/q1-1.md",
-    "DeepLearning/a-extra study material.md",
-    "Pasted image 20250917142035.png",
-    "DeepLearning/Lectures/Untitled.md",
-    "MachineLearning/Lectures/6. Logistic Classification.md",
-    "MachineLearning/Lectures/5 Regression vs Classification.md",
-    "MachineLearning/Lectures/4 Bias & Variance.md",
-    "MachineLearning/Lectures/3 Linear Models of Regression.md",
-    "Python/New Lessons.md",
-    "DeepLearning/a1.md",
-    "Python",
-    "Untitled 1.md",
-    "DeepLearning/Untitled",
-    "PlanningAutomatedReasoning/Assignment 1/Safe Interval Path Planning.md",
-    "PlanningAutomatedReasoning/Labs/lab7.md",
-    "PlanningAutomatedReasoning/Lectures/wk5.md",
+    "MachineLearning/exam/summary.md",
+    "MachineLearning/exam/keywords.md",
+    "MachineLearning/exam/summary-lr.md",
+    "MachineLearning/exam/summary-classification.md",
+    "MachineLearning/exam/misc-liear-regression.md",
+    "Pasted image 20251229192632.png",
+    "Pasted image 20251229192626.png",
+    "Pasted image 20251229192617.png",
+    "Pasted image 20251229192545.png",
+    "Pasted image 20251229192535.png",
+    "MachineLearning/exam/exercises.md",
+    "Assess/titles-mathjax.md",
+    "MachineLearning/exam/summary-gaussiannoise-squareloss-maxlikelihood.md",
+    "Assess/project ideas.md",
+    "Assess/Mathematics.md",
+    "DeepLearning/exam/sem-2-2021.md",
+    "MachineLearning/exam/taxonomy.md",
     "MachineLearning/Slides Summary.md",
-    "DeepLearning/Lectures/6 Deep Learning for Vision II.md",
-    "Pasted image 20250913223351.png",
-    "Pasted image 20250913161717.png",
-    "Pasted image 20250910103524.png",
-    "Pasted image 20250910102944.png",
-    "Pasted image 20250910100731.png",
-    "Pasted image 20250910100303.png",
-    "FIT3181_5215-L04-Quiz.pdf",
-    "FIT3181_5215-L06-Quiz.pdf",
-    "FIT3181_5215_L05_Quiz.pdf",
-    "FIT3181-5215-L4-Quiz.pdf",
-    "FIT3181_5215_Tute03_Introduction.pdf",
-    "FIT3181_5215-W2_Quiz.pdf",
-    "Pasted image 20250909175012.png",
-    "Pasted image 20250909172900.png",
-    "Pasted image 20250909172847.png",
-    "PlanningAutomatedReasoning/Lectures",
-    "MachineLearning/Taxonomy"
+    "DeepLearning/Books-Taxonomy.md",
+    "DeepLearning/a-extra study material.md",
+    "DeepLearning/exam/Image-Text.md",
+    "Assess.md",
+    "MachineLearning/exam/sem-2-2025-sol.md",
+    "MachineLearning/exam/sem-2-2025.md",
+    "Assess/Assessing.md",
+    "MachineLearning/Lectures/3 Linear Models of Regression.md",
+    "DeepLearning/exam/sem-2-2022.md",
+    "DeepLearning/exam/sem-2-2021-sol.md",
+    "Assess/Primordial-Soup-Sim.md",
+    "DeepLearning/exam/sem-2-2022-sol.md",
+    "DeepLearning/exam/sem-2-2024.md",
+    "MachineLearning/exam",
+    "Pasted image 20251021175619.png",
+    "Pasted image 20251021175503.png",
+    "Assess",
+    "DeepLearning/exam",
+    "FIT3181_5215-L7-Quiz-solution.pdf",
+    "FIT5215-L11-Quiz.pdf",
+    "FIT3181_5215-L10-Quiz.pdf",
+    "Pasted image 20251007175654.png",
+    "PlanningAutomatedReasoning/Assignment-2",
+    "Pasted image 20250928204700.png",
+    "Pasted image 20250928204335.png",
+    "Untitled.base",
+    "FIT3181_5215-L09-Quiz.pdf",
+    "FIT3181_5215-L08-Quiz.pdf"
   ]
 }

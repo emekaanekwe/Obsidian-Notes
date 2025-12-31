@@ -30,9 +30,9 @@ d2l = sys.modules[__name__]
 
 ## PyTorch
 
-# Notation
+# Math Notation
 
-**Num Objs**
+### Num Objs
 • 𝑥: a scalar
 • x: a vector
 • X: a matrix
@@ -42,7 +42,7 @@ diagonal entries and 0 on all off-diagonals
 • 𝑥𝑖 , [x] 𝑖 : the 𝑖 th element of vector x
 • 𝑥𝑖 𝑗 , 𝑥𝑖, 𝑗 ,[X] 𝑖 𝑗 , [X] 𝑖, 𝑗 : the element of matrix X at row 𝑖 and column 𝑗.
 
-**Sets**
+### Sets
 • X: a set
 • Z: the set of integers
 • Z+ : the set of positive integers
@@ -56,7 +56,7 @@ diagonal entries and 0 on all off-diagonals
 *• A \ B: set subtraction of B from A (contains only those elements of A that do not*
 *belong to B)*
 
-**Functions**
+### Functions
 • 𝑓 (·): a function
 • log(·): the natural logarithm (base 𝑒)
 • log2 (·): logarithm to base 2
@@ -82,8 +82,96 @@ def
 : product over a collection of elements
 • = : an equality asserted as a definition of the symbol on the left-hand side
 
-**caclulus**
+### Calculus
 *• ∇x 𝑦: gradient of 𝑦 with respect to x*
+
+##  Wk6
+#### Adversarial Attacks
+
+A critical vulnerability of deep learning models which,$$x_{adv}=argmax_{x'\in B_c}L(f(x;\theta),y)$$
+L - CE loss function
+f(x; theta) - model to predict the prediction probabilities
+y - truth labels
+
+input that causes a model to make confident errors. 
+Do this by *increasing* chance of predicting $y'\not =y$, where the Pr of x is towards $x \not = y$ , we *maximize L*, and *untargeted attack* because we are **moving away** from y. 
+
+#### CNN Code Block
+```python
+import torch
+import torch.nn as nn
+
+cnn = nn.Sequential(
+    nn.Conv2d(in_channels=3,  out_channels=16, kernel_size=3, stride=1, padding=1),
+"""purpose:""" 
+primes teh *filter* to go across images and turns input channels into feature maps
+"""params""":
+#kernel_size - small matrix of weights across input (like a NxN window)
+#strides - how many pixels the filter jumps when moving across image (p=1 means move 1 pixel at a time) 
+#padding - tells the filter what to do when reaches end of image    
+    
+    nn.ReLU(),
+    # activation function for nonlinearity
+    
+    nn.MaxPool2d(kernel_size=2, stride=2),
+    # halve the spatial resolution and changes the shape
+    nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1, padding=1),
+    nn.ReLU(),
+    nn.Flatten()
+    # flattens all excpt batch into single feture vector
+)
+
+# Example batch: 64 images, 3 channels, 224x224
+x = torch.randn(64, 3, 224, 224)
+y = cnn(x)  # forward pass
+print(y.shape)  # -> torch.Size([64, 401408])
+
+```
+
+
+
+#### Feed Forward NN
+
+***HELP***
+Given the following feed-forward neural network. Assume that we input to the network a mini-batch X with the batch size 32. What is the shape of the input X if we use activation ReLU?
+
+![[Pasted image 20250926181659.png]]
+
+***HELP***
+
+Feed a mini batch $x\in R^{32\times3}$ to network. what is the shape of $h^1$?
+![[Pasted image 20250926183037.png]]
+
+
+#### Input Tensor Shape to Output Shape
+
+**Over a Conv2D** of [3,32,32]
+32 filters [3,7,7]
+strides [2,2]
+passing 1
+
+**The output Shape**: 
+$$\begin{matrix}Tshape=\frac{width + 2\times padding-filter_{width}}{strides}+1= \\
+[filters, Tshape, Tshape]\end{matrix}$$
+
+
+#### Calculating Batch Gradient Descent
+
+input: obj function $J(\theta)$
+*cost function to minimize*
+Output: optimal $\theta^*$
+init params randomly by $\tilde {}N(0, \sigma^2)$
+*the guassian distro with mean 0 and variance sigma^2*
+for t=1 to T
+compute $\nabla_{\theta}J(\theta)=\frac{\partial J}{\partial \theta}(\theta)$
+*compute gradient of ost function at each iteration*
+update $\theta_{t+1}=\theta_t - \eta\nabla_{\theta}J(\theta)$
+*update params in opposite direction of gradient*
+($\eta$ is the learning rate)
+return $\theta^*$
+$\nabla_{\theta}J(\theta)$ - the direction with steepest increase in J
+$\theta^*$ - updated in opposite dir
+
 
 # Ch 1
 

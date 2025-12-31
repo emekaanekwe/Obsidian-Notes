@@ -152,8 +152,8 @@ Predicting coin flips with a biased coin. Even after 10 flips, can we be *certai
 **Slides 6-12**  
 #### **Random Variables & Distributions**  
 - **Coin Toss Example**:  
-  - Let \( X \) be a random variable: \( X \in \{H, T\} \).  
-  - Probability distribution: \( p(X=H) = w \), \( p(X=T) = 1-w \).  
+  - Let \( X \) be a random variable: $( X \in \{H, T\} )$.  
+  - Probability distribution: $( p(X=H) = w ), ( p(X=T) = 1-w ).$  
   - Rules: \( 0 \leq w \leq 1 \), \( p(H) + p(T) = 1 \).  
 
 #### **Joint & Conditional Probability**  

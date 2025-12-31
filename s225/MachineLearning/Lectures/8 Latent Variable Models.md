@@ -1,5 +1,5 @@
 
-### Detailed Analysis of Lecture: Latent Variables & The EM Algorithm
+### Latent Variables & The EM Algorithm
 
 ---
 
