@@ -1,0 +1,10 @@
+{
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "latex-center-text",
+    "latex-wrap-text"
+  ],
+  "cssTheme": "Prism",
+  "baseFontSize": 16,
+  "baseFontSizeAction": true
+}
