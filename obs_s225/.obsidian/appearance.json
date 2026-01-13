@@ -1,8 +1,0 @@
-{
-  "theme": "obsidian",
-  "enabledCssSnippets": [
-    "latex-center-text",
-    "latex-wrap-text"
-  ],
-  "cssTheme": "Prism"
-}
