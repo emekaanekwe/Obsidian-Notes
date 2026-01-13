@@ -1,1 +1,0 @@
-Research: support for Nash Equilibrium (which is one of the strategies involved in solving for the nash equailibirum)
