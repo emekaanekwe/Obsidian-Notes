@@ -1,4 +1,17 @@
 
+
+1. explain process of k-fold cross validation
+2. ho do you derive a closed form solution for MLE and EM algorithm?
+3. 
+
+
+
+
+
+
+
+
+---
 ## 1) Weights
 
 ### Informal definition
