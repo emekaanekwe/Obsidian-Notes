@@ -1,6 +1,4 @@
 
----
-
 ## Why EvoJAX + Ray is a Power Combo
 
 ### **1. Technical Synergy (They Actually Complement Each Other)**
