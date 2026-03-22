@@ -1,4 +1,5 @@
-
+***LLM PROMPT***
+_Help me create a study guide the Monash University Masters of AI unit FIT5217: Natural Language Processing class_ --- _Use the .md file I atached. It contains summaries of all 12 weeks, and suggested reading material._---  _Create a chart, table, or another appropriate visual to summarize how the most important concepts/rules/definitions in the NLP class relate or differ from one another._ --- _Ignore the "# Assessments" section_ 
 # Summary
 ## FIT5217 2026
     
@@ -11,7 +12,10 @@
     |02|design systems to tackle NLP problems;|
     |03|Evaluation of NLP models from utility & ethics, and safety perspectives.|
     |04|assess various recent approaches to NLP.|
-    
+
+### Unit Period 
+
+March 2nd - June 26th
 ### Teaching approach
     
     The course material for this unit will be provided as readings (optional), and live online lectures on Zoom during the timetabled lecture period. The recording of the lectures will be made available within 24 hours of the session.  Applied sessions (also known as tutorials) will then give students the opportunity to develop their knowledge by attempting practical tasks (mostly designed as Jupyter Notebooks) individually, while being supported by teaching staff.  These applied sessions will not be recorded and are in-person & on-campus activities (check Allocate+ for your allocation of time and room). Assessments will be through 2 in-semester assignments, and a final assessment (i.e., exam).
@@ -300,3 +304,10 @@ By the end of this week, you'll be able to:
 3. Exam
     Threshold hurdle
     Weighting: 50%
+
+# Recommended Resources
+
+
+- Speech and Language Processing (3rd ed. draft), Dan Jurafsky and James H. Martin, Draft chapters in progress, October 16, 2019. The PDF can be obtained here: [https://web.stanford.edu/~jurafsky/slp3/](https://web.stanford.edu/~jurafsky/slp3/)
+- Foundations of Statistical Natural Language Processing, Chris Manning and Hinrich Schütze, MIT Press. Cambridge, MA: May 1999. The book's website: [https://nlp.stanford.edu/fsnlp/](https://nlp.stanford.edu/fsnlp/)
+- Introduction to Natural Language Processing, Jacob Eisenstein, MIT Press. Cambridge, 2019.
