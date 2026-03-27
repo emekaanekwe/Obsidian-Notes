@@ -28,7 +28,6 @@ $y(x,w)=w_0+\sum_{j=0}^{M-1} w_j \phi_j (x) = w^T\phi (x)$
 ## 3. Learning the Parameters: The Objective Function
 
 *The goal is to find the weight vector* `𝐰` *that best fits the training data* `{x_n, t_n}_{n=1}^N`.
-
 ### Sum-of-Squares Error Function
     $$J(𝐰) = (1/2) * Σ_{n=1}^N [t_n - 𝐰ᵀφ(x_n)]²$$
 	  This measures the "misfit" between the model's predictions `y(x_n, 𝐰)` and the true targets $t_n$
