@@ -73,3 +73,5 @@ dot product
 $$\cdot$$
 phi variable
 $$\varphi$$
+radical
+$$\sqrt{x}$$
