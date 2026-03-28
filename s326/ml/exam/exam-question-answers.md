@@ -4,12 +4,17 @@
 ## 1 Classification versus Regression
 
 ### Question
-What is the statistical supervised learning problem on a high level and what is difference between a classification and a regression problem? Answer in two to three sentences. 
+What is the statistical supervised learning problem on a high level, and what is difference between a classification and a regression problem? Answer in two to three sentences. 
 
 ### Answer
 In statistical supervised learning we are predicting the value $y(x)$ of a target (random) variable $T$ given the value of an input variable $X = x$ such that $y(X)$ is on average a good approximation to $T$ where this average is taken with respect to the joint distribution of $X$ and $T$ that governs both, the process of sampling training data as well as the occurrence of data later when the prediction model is deployed.
 
 In **regression** the response variable $T$ is assumed to be continuous, e.g., the predicted future price of a financial asset or the predicted temperature in a specific region. In contrast, in **classification** the response variable has a discrete domain of a finite number of categories, e.g., 'spam'/'no-spam' for e-mail classification or 'tuna', 'salmon', 'bass' for the fish classification example.
+
+#### My Own Answers
+
+the aim of statistical supervised ML is to predict unseen data based on training data through the prediction of a random target variable $T$ using a random input variable $X=x$ where $\phi(x)$ outputs the best approximation to $T$ over the joint probability distribution $P(X,T)$. Formally, the aim is to *find the Bayesian optimal predictor*,
+$$y^*=\underset{y}{agmin}\mathbb{E}_{p(x,t)}[L(t, y(x))]$$
 
 ---
 
@@ -19,19 +24,19 @@ In **regression** the response variable $T$ is assumed to be continuous, e.g., t
 What is the ultimate goal of statistical supervised learning? How are the concepts of training error and test error related to this goal?
 
 ### Answer
-The ultimate goal of predictive (supervised) learning is to find a prediction function $y(x)$ with small **generalisation error**, i.e., expected loss between target value $T$ and prediction $y(X)$ based on input value $X$:
+The ultimate goal of predictive (supervised) learning is to find a prediction function $y(x)$ with small *generalisation error*, i.e., expected loss between target value $T$ and prediction $y(X)$ based on input value $X$:
 
 $$
 \mathbb{E}(l(T,y(X))).
 $$
 
-One aims to find such a prediction function by minimising the **training error**
+One aims to find such a prediction function by *minimising the training error*
 
 $$
 \frac{1}{N}\sum_{n = 1}^{N}l(t_n,y(x_n))
 $$
 
-on a set of training data $(x_{1},t_{1}),\ldots ,(x_{N},t_{N})$ that has been sampled independently and identically distributed according to the joint distribution of $X$ and $T$. The **test error**
+on a set of training data $(x_{1},t_{1}),\ldots ,(x_{N},t_{N})$ that has been sampled independently and identically distributed according to the joint distribution of $X$ and $T$. The *test error*
 
 $$
 \frac{1}{M}\sum_{m = 1}^{M}l(t_{N + m},y(x_{N + m}))
