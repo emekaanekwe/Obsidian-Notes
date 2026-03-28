@@ -45,10 +45,12 @@ on further i.i.d. test data $(x_{N + 1},t_{N + 1}),\ldots ,(x_{N + M},t_{N + M})
 
 ### Scenario
 Consider the following scenario: 
-• Alice wants to model the species (‘setosa’, ‘versicolor’, or ‘virginica’) of iris flowers as a function of four variables (their sepal and petal length and width) • She has collected a dataset of 150 examples 
-•She wants to use the kNN classifier but she does not know what is a suitable value for k, hence shes want to choose k from the set of candidates {1, 2, ..., 10} based on the collected data • Finally, she wants a reliable estimate of the performance of the model that has been learned.  Currently Alice plans to proceed with the following machine learning workflow: 
+• Alice wants to model the species (‘setosa’, ‘versicolor’, or ‘virginica’) of iris flowers as a function of four variables (their sepal and petal length and width) 
+• She has collected a dataset of 150 examples 
+•She wants to use the kNN classifier but she does not know what is a suitable value for $k$, hence shes want to choose $k$ from the set of candidates ${1, 2, ..., 10}$ based on the collected data 
+• Finally, she wants a reliable estimate of the performance of the model that has been learned. Currently Alice plans to proceed with the following machine learning workflow: 
 1. Split the data into 10 folds of roughly equal size. 
-2. Pick the value of k with the second best average test error across all folds (for each using the remaining folds as training data). In particular, she plans to use the second best “to avoid overfitting”. 
+2. Pick the value of $k$ with the second best average test error across all folds (for each using the remaining folds as training data). In particular, she plans to use the second best “to avoid overfitting”. 
 3. Use this test error as the final performance estimate. 
 ### Questions
 Answer the following two questions: 
@@ -59,22 +61,21 @@ workflow and why.
 ### Answers
 **(a)** The average test error of the chosen model (corresponding to the second best $k$) obtained by Alice’s cross validation procedure is optimistically biased, because the test data is used as part of the overall training data to learn the value for $k$.
 
-**(b)** The procedure can be corrected by first performing a training/test split, carrying out the cross validation procedure to choose $k$ only based on the training data, and obtaining a final estimate of the generalisation error on the test data.
+**(b)** The procedure can be corrected by first performing a training/test split, carrying out the cross validation procedure to choose $k$ only based on the training data, and obtaining a final estimate of the generalization error on the test data.
 
 ---
 
 ## 4 Normal Distribution and Maximum Likelihood Estimation
 
 ### Scenario
-The (uni-variate) normal distribution is an extremely important distribution describing the behaviour of continuous random variables. It is parameterised by a mean μ and a standard deviation parameters σ (or more typically by the corresponding variance parameter σ^2). Given a dataset {x1 , ... , xN } of independent realisations of a normal random variable X, we can use the principal of maximum
-likelihood to find guesses for the unknown parameters. In particular, these guesses have simple closed form solutions. 
+The (uni-variate) normal distribution is an extremely important distribution describing the behavior of continuous random variables. It is parameterized by a mean μ and a standard deviation parameters σ (or more typically by the corresponding variance parameter $\sigma^2$). Given a dataset ${x_1 , ... , x_N}$ of independent realizations of a normal random variable X, we can use the principal of maximum likelihood to find guesses for the unknown parameters. In particular, these guesses have simple closed form solutions. 
 
 ### Questions
 Answer each of the following questions with one to two sentences and give mathematical derivations as appropriate: 
-(a) What is the definition of the normal density function p(x|μ, σ)? What is the key component of the definition that gives rise to the characteristic bell shape? 
-(b) What is the key idea of the maximum likelihood estimation of the parameters μ and σ, i.e., what is the defining property of the maximum likelihood estimates μ{ML} and σ{ML} . 
-(c) How can we derive the closed form solution of the maximum likelihood estimation for the mean μ? Apply this approach to derive it. 
-(d) How can we derive the closed form solution of the maximum likelihood estimation for the standard deviation σ? Apply this approach to derive it. 
+(a) What is the definition of the normal density function $p(x|\mu, \sigma)$? What is the key component of the definition that gives rise to the characteristic bell shape? 
+(b) What is the key idea of the maximum likelihood estimation of the parameters $\mu$ and $\sigma$, i.e., what is the defining property of the maximum likelihood estimates $μ_{ML}$ and $σ_{ML}$? 
+(c) How can we derive the closed form solution of the maximum likelihood estimation for the mean $\mu$? Apply this approach to derive it. 
+(d) How can we derive the closed form solution of the maximum likelihood estimation for the standard deviation $\sigma$? Apply this approach to derive it. 
 ### Answers
 **(a)** The density function of $N(\mu , \sigma^2)$, the normal distribution with mean $\mu$ and variance $\sigma^2$ is
 
@@ -126,8 +127,8 @@ $$
 
 ## 5 Derivation of Squared Error
 ### Scenario
-For fitting the model parameters w of a linear regression model, we used the approach to minimise the squared error: $$E(w) = \frac{1}{2}\sum^{N}_{n=1}(t_n-y_n)^2$$  where 
-$${(x1, t1 ), ... , (xN , tn)}$$ is the given training data and 
+For fitting the model parameters w of a linear regression model, we used the approach to minimize the squared error: $$E(w) = \frac{1}{2}\sum^{N}_{n=1}(t_n-y_n)^2$$  where 
+$${(x_1, t_1 ), ... , (x_N , t_n)}$$ is the given training data and 
 $y_n = \sum^{p}_{i=1}w_iφ_i (x_n)$ are the model predictions. To justify this error function, we showed that it can be derived as a maximum likelihood parameter estimation for a probabilistic model $p(t|x, w)$. 
 
 ### Questions
@@ -135,7 +136,7 @@ Answer each of the following questions with one to two sentences (including math
 
 (a) What is the form of the probabilistic model that we assumed for the regression problem, i.e., how are the target values generated given the input vectors? 
 (b) What is the likelihood function corresponding to this model? 
-(c) Why is maximising this likelihood function equivalent to minimising the squared error function? 
+(c) Why is maximizing this likelihood function equivalent to minimizing the squared error function? 
 
 ### Answers
 **(a)** We assumed that the conditional distribution of the target variable $T$ given the input variable $X$ follows a deterministic function $y(X)$ plus normally distributed noise (with mean 0), i.e.,
@@ -164,15 +165,15 @@ which is the same as the squared error up to a (positive) constant factor and a 
 ## 6 Logistic Regression
 
 ### Scenario
-When using the logistic regression model for binary classification, we model the probability of the positive class (t = 1) given input x via the sigmoid transformation σ of a linear function w · x of model parameters w. 
+When using the logistic regression model for binary classification, we model the probability of the positive class $(t = 1)$ given input $x$ via the sigmoid transformation σ of a linear function $w · x$ of model parameters $w$. 
 
 ### Questions
-(a) Give the log likelihood function log p(t|x, w) of the logistic regression model for a single data point (x, t). Hint: We used the fact that we encode the positive class with t = 1 and the negative class with t = 0 to give a compact formula. 
-(b) As a step towards the gradient descent algorithm for logistic regression, derive the partial derivative of the negative log likelihood (error function) − log p(t|x, w) with respect to parameter w_i . Derive the result in individual steps, noting what results you are using (all correct steps give partial marks).
-(c) Extend your result from part (b) to the full gradient of the negative log likelihood when observing a set of n training data points {(x1, t1 ), ... , (xN , tn)}. 
+(a) Give the log likelihood function $log p(t|x, w)$ of the logistic regression model for a single data point $(x, t)$. Hint: We used the fact that we encode the positive class with $t =1$ and the negative class with $t = 0$ to give a compact formula. 
+(b) As a step towards the gradient descent algorithm for logistic regression, derive the partial derivative of the negative log likelihood (error function) $−log p(t|x, w)$ with respect to parameter $w_i$ . Derive the result in individual steps, noting what results you are using (all correct steps give partial marks).
+(c) Extend your result from part (b) to the full gradient of the negative log likelihood when observing a set of $n$ training data points ${(x_1, t_1 ), ... , (x_N , t_n)}$. 
 
 ### Answers
-**(a)** Given that the sigmoid transform of $\mathbf{w}\cdot\mathbf{x}$ is the modelled probability of $y = 1$, we can write the likelihood as
+**(a)** Given that the sigmoid transform of $\mathbf{w}\cdot\mathbf{x}$ is the modeled probability of $y = 1$, we can write the likelihood as
 
 $$
 p(t|\mathbf{x},\mathbf{w}) = \sigma(\mathbf{w}\cdot\mathbf{x})^t \bigl(1 - \sigma(\mathbf{w}\cdot\mathbf{x})\bigr)^{(1 - t)},
@@ -232,14 +233,12 @@ $$
 ## 7 Document Clustering Model
 
 ### Scenario
-Suppose we are given a collection of documents D. The data set D is represented as {x1 , x2, x3 , ..., xN } where x_i is a d-dimensional “count vector” representing the i-th document, based on bag-of-words and with respect to a word vocabulary of size d. We are interested in fitting a Mixture multinomial model onto this dataset. 
+Suppose we are given a collection of documents $D$. The data set $D$ is represented as ${x_1 , x_2, x_3 , ..., x_N }$ where $x_i$ is a d-dimensional “count vector” representing the i-th document, based on bag-of-words and with respect to a word vocabulary of size $d$. We are interested in fitting a Mixture multinomial model onto this dataset. 
 
 ### Questions
-(a) An individual cluster is described by a vector of word occurrence probabilities μ where μ_j describes the probability of a word in a document to be the j-th word in the vocabulary. Give a formula of the probability p(x|μ) of a count vector x given word occurrence probabilities μ and give a brief explanation of the formula (one to two sentences). Hint: remember that, for simplicity, we assumed the individual counts to be independent. 
-(b) Write down the “Q-function”, which is the basis of the Expectation-Maximization (EM) algorithm for maximizing the log-likelihood. Notice that you do
-not need to write the EM algorithm in this part. 
-(c) Write down the “hard” as well as the ”soft” Expectation-Maximization (EM)
-algorithm for estimating the parameters of the model. If necessary, provide enough explanation to under- stand the algorithm that you have written. Also briefly explain what is the main difference between hard and soft EM. 
+(a) An individual cluster is described by a vector of word occurrence probabilities $\mu$ where $\mu_j$ describes the probability of a word in a document to be the j-th word in the vocabulary. Give a formula of the probability $p(x|\mu)$ of a count vector $x$ given word occurrence probabilities $\mu$ and give a brief explanation of the formula (one to two sentences). Hint: remember that, for simplicity, we assumed the individual counts to be independent. 
+(b) Write down the “Q-function”, which is the basis of the Expectation-Maximization (EM) algorithm for maximizing the log-likelihood. Notice that you do not need to write the EM algorithm in this part. 
+(c) Write down the “hard” as well as the ”soft” Expectation-Maximization (EM) algorithm for estimating the parameters of the model. If necessary, provide enough explanation to under- stand the algorithm that you have written. Also briefly explain what is the main difference between hard and soft EM. 
 
 ### Answers
 **(a)** Following the notation used in Module 4, we reiterate the probabilistic model. We would like to partition $N$ documents into $K$ clusters. We represent each document $x_n$ under a bag of words representation (BoW) coming from a dictionary denoted by $A$. We use mixture multinomial models to model our latent variable model. Each document $x_n$ is first generated by being allocated to a cluster $k$ under a multinomial distribution (parameter $\phi$). Given the cluster $k$ for $x_n$, each word is generated from a multinomial model (parameters $\mu_k$). As such, we define the following constraints:
@@ -277,7 +276,7 @@ $$
 # Neural Networks
 ## 8 Forward and Backward Propagation
 ### Scenario
-Given a neural network f(·) and a dataset $D = {(x_1, y_1), (x_2 , y_2), ..., (x_n , y_n)}$ where $x_i$ is a 2-dimensional vector and $y_i$ is a scalar value which represents the target. ${w1, w2 , ..., w_n }$ are learnable parameters. $h$ represents a linear unit. For example $t_i = h_1w_7 +h_2w_8$. The error function for training this neural network is the sum of squared error: $$E(w)=\frac{1}{2}\sum^{N}_{n=1}(yi-ti)^2$$ with the nodes as,
+Given a neural network $f(·)$ and a dataset $D = {(x_1, y_1), (x_2 , y_2), ..., (x_n , y_n)}$ where $x_i$ is a 2-dimensional vector and $y_i$ is a scalar value which represents the target. ${w1, w2 , ..., w_n }$ are learnable parameters. $h$ represents a linear unit. For example $t_i = h_1w_7 +h_2w_8$. The error function for training this neural network is the sum of squared error: $$E(w)=\frac{1}{2}\sum^{N}_{n=1}(yi-ti)^2$$ with the nodes as,
 
 ```mermaid
 graph TD
@@ -309,8 +308,8 @@ graph TD
 ```
 
 ### Questions
-(a) Suppose we have a sample x, where x1 =0.5, x2 =0.6, x3 =0.7. The network parameters are w1 =2, w2 =3 w3 =2, w4 =1.5 w5 =3, w6 =4 w7 =6, w8 =3 Next, let’s suppose the target value y for this example is 4. Write down the forward steps and the prediction error for this given sample. Hint: you need to write down the detailed computational steps. 
-(b) Given the prediction error in the previous question, calculate the gradient of w1, namely \frac{∂E}{∂w1}. Please also write down all involved derivatives
+(a) Suppose we have a sample $x$, where $x_1 =0.5, x_2 =0.6, x_3 =0.7$. The network parameters are $w_1 =2, w_2 =3, w_3 =2, w_4 =1.5, w_5 =3, w_6 =4, w_7 =6, w_8 =3$ Next, let’s suppose the target value $y$ for this example is 4. Write down the forward steps and the prediction error for this given sample. Hint: you need to write down the detailed computational steps. 
+(b) Given the prediction error in the previous question, calculate the gradient of $w_1$, namely $\frac{∂E}{∂w1}$. Please also write down all involved derivatives
 
 ### Answers
 **(a)** Given the network with inputs $X_1=0.5, X_2=0.4, X_3=0.3$, weights $W_1=2, W_2=3, W_3=4, W_4=5, W_5=6, W_6=7, W_7=6, W_8=5$, and target $y=4$:
