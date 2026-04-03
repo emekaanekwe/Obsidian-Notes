@@ -13,8 +13,7 @@ In **regression** the response variable $T$ is assumed to be continuous, e.g., t
 
 #### My Own Answers
 
-the aim of statistical supervised ML is to predict unseen data based on training data through the prediction of a random target variable $T$ using a random input variable $X=x$ where $\phi(x)$ outputs the best approximation to $T$ over the joint probability distribution $P(X,T)$. Formally, the aim is to *find the Bayesian optimal predictor*,
-$$y^*=\underset{y}{agmin}\mathbb{E}_{p(x,t)}[L(t, y(x))]$$
+the aim of statistical supervised ML is to predict unseen data based on training data through the prediction of a random target variable $T$ using a random input variable $X=x$ where $\phi(x)$ outputs the best approximation to $T$ over the joint probability distribution $P(X,T)$. 
 
 ---
 
@@ -43,6 +42,10 @@ $$
 $$
 
 on further i.i.d. test data $(x_{N + 1},t_{N + 1}),\ldots ,(x_{N + M},t_{N + M})$ is then used as an unbiased estimate of the prediction function that has been found.
+
+#### My Answer
+the aim is to find the *Bayesian optimal predictor* given the data,
+$$y^*=\underset{y}{agmin}\mathbb{E}_{p(x,t)}[L(t, y(x))]$$
 
 ---
 
@@ -77,16 +80,20 @@ The (uni-variate) normal distribution is an extremely important distribution des
 
 ### Questions
 Answer each of the following questions with one to two sentences and give mathematical derivations as appropriate: 
-(a) What is the definition of the normal density function $p(x|\mu, \sigma)$? What is the key component of the definition that gives rise to the characteristic bell shape? 
-(b) What is the key idea of the maximum likelihood estimation of the parameters $\mu$ and $\sigma$, i.e., what is the defining property of the maximum likelihood estimates $μ_{ML}$ and $σ_{ML}$? 
-(c) How can we derive the closed form solution of the maximum likelihood estimation for the mean $\mu$? Apply this approach to derive it. 
-(d) How can we derive the closed form solution of the maximum likelihood estimation for the standard deviation $\sigma$? Apply this approach to derive it. 
+**(a)** What is the definition of the normal density function $p(x|\mu, \sigma)$? What is the key component of the definition that gives rise to the characteristic bell shape? 
+**(b)** What is the key idea of the maximum likelihood estimation of the parameters $\mu$ and $\sigma$, i.e., what is the defining property of the maximum likelihood estimates $μ_{ML}$ and $σ_{ML}$? 
+**(c)** How can we derive the closed form solution of the maximum likelihood estimation for the mean $\mu$? Apply this approach to derive it. 
+**(d)** How can we derive the closed form solution of the maximum likelihood estimation for the standard deviation $\sigma$? Apply this approach to derive it. 
 ### Answers
 **(a)** The density function of $N(\mu , \sigma^2)$, the normal distribution with mean $\mu$ and variance $\sigma^2$ is
 
 $$
 p(x|\mu ,\sigma) = \frac{1}{\sqrt{2\pi}\sigma}\exp \left(-\frac{(x - \mu)^2}{2\sigma^2}\right).
 $$
+
+where 
+- $\mu$ are the parameters
+- $\frac{1}{\sigma\sqrt{2\pi}}$ is the normalization constant which ensures that the total area under the density function equals 1
 
 The central component is the exponential reduction of the density in the normalised square of the difference of $x$ from the mean $\mu$. This creates the bell shaped curve, because of a slow reduction close to the mean (where the normalised difference is less than 1) and a rapid reduction further away from the mean.
 
