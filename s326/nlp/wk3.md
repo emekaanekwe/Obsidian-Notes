@@ -189,12 +189,12 @@ An HMM models _how words are generated from hidden POS tags_.
 
 An HMM $\lambda$ is defined by:
 
-|Symbol|Name|Description|
-|---|---|---|
-|$Q = {q_1, \ldots, q_N}$|States|The $N$ POS tags (+ START, END)|
-|$V = {v_1, \ldots, v_M}$|Observations|The vocabulary (all possible words)|
-|$A = a_{ij}$|Transition Matrix|$P(\text{state } s_j \mid \text{state } s_i)$|
-|$B = b_j(v_k)$|Emission Matrix|$P(\text{word } v_k \mid \text{state } s_j)$|
+| Symbol                   | Name              | Description                                   |
+| ------------------------ | ----------------- | --------------------------------------------- |
+| $Q = {q_1, \ldots, q_N}$ | States            | The $N$ POS tags (+ START, END)               |
+| $V = {v_1, \ldots, v_M}$ | Observations      | The vocabulary (all possible words)           |
+| $A = a_{ij}$             | Transition Matrix | $P(\text{state } s_j \mid \text{state } s_i)$ |
+| $B = b_j(v_k)$           | Emission Matrix   | $P(\text{word } v_k \mid \text{state } s_j)$  |
 
 **HMM parameters:** $\lambda = (A, B)$
 
@@ -214,11 +214,11 @@ Each word depends only on its current POS tag — not on any other words or tags
 
 ### Three Core HMM Tasks
 
-|#|Task|Given|Find|Algorithm|
-|---|---|---|---|---|
-|1|**Observation Likelihood**|$\lambda,\ O$|$P(O \mid \lambda)$|Forward Algorithm|
-|2|**Decoding**|$\lambda,\ O$|Best tag sequence $Q^*$|Viterbi Algorithm|
-|3|**Learning**|Labelled corpus|$\lambda = (A, B)$|MLE counting|
+| #   | Task                       | Given           | Find                    | Algorithm         |
+| --- | -------------------------- | --------------- | ----------------------- | ----------------- |
+| 1   | **Observation Likelihood** | $\lambda,\ O$   | $P(O \mid \lambda)$     | Forward Algorithm |
+| 2   | **Decoding**               | $\lambda,\ O$   | Best tag sequence $Q^*$ | Viterbi Algorithm |
+| 3   | **Learning**               | Labelled corpus | $\lambda = (A, B)$      | MLE counting      |
 
 ---
 
