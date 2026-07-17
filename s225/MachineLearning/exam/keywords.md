@@ -1,16 +1,4 @@
 
-
-1. explain process of k-fold cross validation
-2. ho do you derive a closed form solution for MLE and EM algorithm?
-3. 
-
-
-
-
-
-
-
-
 ---
 ## 1) Weights
 
@@ -2442,5 +2430,3 @@ Largest-variance direction is the $x$-axis: $\mathbf{u}_1=[1,0]^\top$.
 
 - “Maximum likelihood” and “Log-likelihood” appeared earlier too; the key difference is **probability vs log-probability** and **joint vs conditional**.
     
-
-If you want, I can turn this into a **one-page “EM/GMM map”** (complete-data LL → Q-function → E-step responsibilities → M-step updates) because that cluster of terms is where exams often try to trick you.
