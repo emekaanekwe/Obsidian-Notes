@@ -134,7 +134,7 @@ $$g = \begin{bmatrix}\dfrac{\partial f}{\partial \theta_1} \\[4pt] \dfrac{\parti
 
 **Key takeaway**: since $P$ (parameter count) can be in the millions, saddle points **exponentially outnumber** local minima/maxima. This is why optimization in deep learning is dominated by concerns about escaping saddle points rather than avoiding poor local minima — empirically, most local minima found by SGD tend to be "good enough," but saddle points can stall training.
 
-The DL loss surface itself (e.g., a ResNet without skip connections) is visually extremely rugged — highly non-linear, non-convex, with many local minima but even more saddle points.
+The DL loss surface itself (e.g., a ResNet without skip connections) is visually extremely rugged — highly gnon-linear, non-convex, with many local minima but even more saddle points.
 
 ---
 
